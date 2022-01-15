@@ -34,7 +34,12 @@ int main(int argc, char*argv[]) {
     }
     if(count==1) a[j++]=atoi(argv[i]);
   }
-
-  printf("Minimum = %d",Min(a,j));
-  printf("\nMaximum = %d\n",Max(a,j));
+  if(Min(a,j)==0){
+    printf("Minimum = No prime number");
+  }
+  else printf("Minimum = %d",Min(a,j));
+  if(Max(a,j)==0){
+    printf("\nMaximum = No prime number\n");
+  }
+  else printf("\nMaximum = %d\n",Max(a,j));
 }
